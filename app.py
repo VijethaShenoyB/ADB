@@ -22,25 +22,6 @@ def hello():
    return "<h1>Hi</h1>"
 
 
-#display image for given name
-@app.route("/", methods=['GET','POST'])
-def display():
-    getname = 'Mars'
-    cursor.execute("select Picture from datab where Name = 'Mars';")
-    getimage = cursor.fetchall()
-    return render_template('index.html', setimage = "mars.jpg")
-
-#Q2
-#display image for given name
-@app.route("/display", methods=['GET','POST'])
-def displaymessage():
-    
-    cursor.execute("select Picture from datab where Picture is not null;")
-    getimage = cursor.fetchall()
-    return render_template('display.html', setimage = getimage)
-
-
-
 
    
 
