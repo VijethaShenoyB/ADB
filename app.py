@@ -1,20 +1,8 @@
 import os
 from flask import Flask, render_template, request
 import pandas as pd
-import pyodbc
-
 
 app = Flask(__name__)
-
-server = 'shenoyserver.database.windows.net'
-database = 'ShenoyDB'
-username = 'vijethashenoy'
-password = 'Vijushenoy96'
-driver= '{ODBC Driver 17 for SQL Server}'
-
-
-
-
 
 @app.route('/')
 def hello():
