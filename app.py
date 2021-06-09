@@ -15,7 +15,7 @@ def data():
       f = request.form['csvfile']
       data = []
       with open(f) as file:
-         csvfile csv.reader(file)
+         csvfile = csv.reader(file)
          for row in csvfile:
             data.append(row)  
       return render_template('data.html', data=data)
