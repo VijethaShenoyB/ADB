@@ -1,0 +1,80 @@
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+            <style>
+        header {
+  background-color: #666;
+  padding: 10px;
+  text-align: left;
+  font-size: 20px;
+  color: white;
+}
+table, th, td {
+  border: 1px solid black;
+}
+    </style>
+</head>
+<body>
+<div>
+    <header>
+        <p>Student ID: 1001861876</p><br/>
+        <p>Amrutha Kenchanagowdra</p><br/>
+    </header>
+</div><br/><hr>
+<div>
+
+  {%if setimage %}
+    <img src="/static/{{setimage}}" alt="User Image unavailable" width="300" height="400">
+  {%endif%}
+
+  <div>
+    <p>
+      <form action="/range" method="get">
+         range1<input type="text" name="frange1" id="codew31ee23e" />
+         range2<input type="text" name="frange2" id="codew31ee23e" />
+       <input type="submit" value="Submit"><br/><br/>
+     </form>
+     </p>
+  </div>
+
+</div>
+
+
+<div>
+  <p>
+  <form action="/editgetname" method="get">
+    Edit the deatils of <input type="text" name="egetname" id="codew31ee25e" />
+  <input type="submit" value="Submit"><br/><br/>
+  {%if message %}
+  {{message}}
+  {%endif%}
+  
+  </form>
+  </p>
+  </div><br/><hr>
+
+
+  <div>
+    <p>
+    <form action="/uploadimg" method="get">
+      add or update image of <input type="text" name="imguser" id="codew31ee25e" />
+    <input type="submit" value="Submit"><br/><br/>
+     {%if imessage %}
+      {{message}}
+    {%endif%}
+    </form>
+    </p>
+    </div><br/><hr>
+
+
+
+
+</body>
+</html>
+
+{% endblock %}
