@@ -11,7 +11,7 @@ def index():
 @app.route('/data', methods=['GET', 'POST'])
 def data():
    if request.method == 'POST':
-      f = request.form['csvfile']
+      f = request.form['csvfile'] 
       data = []
       with open(f) as file:
          csvfile = csv.reader(file)
