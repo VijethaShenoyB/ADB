@@ -2,8 +2,20 @@
 <body>
 <div>
     Display picture
-   <h2 align="left"><p>Name</p></h2><br/>
+    <h2 align="left"><p>Name</p></h2><br/>
     <H2>Add or Update the image</H2>
+
+    <p>
+        <form action="/submitimage" method="POST" enctype="multipart/form-data">
+      
+          Current Image is: <br/><br/>
+          update image of <input type="text" name="imgguy" /><br/><br/>
+      
+           <label for="myfile">Select a file:</label>
+           <input type="file" id="myfile" name="myfile"><br/>
+           <input type="submit" value="Submit"><br/><br/>
+        </form>
+        </p>
 
   </div><br/><hr>
   </body>
