@@ -15,6 +15,8 @@ df1=df.replace(np.nan,"",regex=True)
 
 data = df1.values.tolist()
 
+
+
 @app.route('/', methods=["POST","GET"])
 def hello():
 	return render_template('index.html')
